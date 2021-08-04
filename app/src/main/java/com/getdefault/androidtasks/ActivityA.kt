@@ -1,14 +1,23 @@
 package com.getdefault.androidtasks
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.getdefault.androidtasks.databinding.ActivityABinding
 
 class ActivityA : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_a)
+        val binding = ActivityABinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         Log.d("Activity_A", "OnCreate Called")
+
+        binding.btnNavigate.setOnClickListener {
+            val intent = Intent(this, ActivityB::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onRestart() {
