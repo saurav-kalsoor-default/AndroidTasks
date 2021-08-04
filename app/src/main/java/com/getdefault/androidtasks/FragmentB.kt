@@ -6,23 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.getdefault.androidtasks.databinding.FragmentABinding
+import com.getdefault.androidtasks.databinding.FragmentBBinding
 
-class FragmentA : Fragment() {
-
+class FragmentB : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentABinding.inflate(layoutInflater)
+        val binding = FragmentBBinding.inflate(layoutInflater)
 
-        Log.d("Fragment_A", "OnCreateView Called")
-
-        binding.btnNavigate.setOnClickListener {
-            findNavController().navigate(FragmentADirections.actionFragmentAToFragmentB())
-        }
+        Log.d("Fragment_B", "OnCreateView Called")
 
         return binding.root
     }
@@ -30,60 +24,60 @@ class FragmentA : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Log.d("Fragment_A", "OnCreate Called")
+        Log.d("Fragment_B", "OnCreate Called")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("Fragment_A", "OnViewCreated Called")
+        Log.d("Fragment_B", "OnViewCreated Called")
     }
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         super.onViewStateRestored(savedInstanceState)
 
-        Log.d("Fragment_A", "OnViewStateRestored Called")
+        Log.d("Fragment_B", "OnViewStateRestored Called")
     }
 
     override fun onStart() {
         super.onStart()
 
-        Log.d("Fragment_A", "OnStart Called")
+        Log.d("Fragment_B", "OnStart Called")
     }
 
     override fun onResume() {
         super.onResume()
 
-        Log.d("Fragment_A", "OnResume Called")
+        Log.d("Fragment_B", "OnResume Called")
     }
 
     override fun onPause() {
         super.onPause()
 
-        Log.d("Fragment_A", "OnPause Called")
+        Log.d("Fragment_B", "OnPause Called")
     }
 
     override fun onStop() {
         super.onStop()
 
-        Log.d("Fragment_A", "OnStop Called")
+        Log.d("Fragment_B", "OnStop Called")
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
 
-        Log.d("Fragment_A", "OnSaveInstanceState Called")
+        Log.d("Fragment_B", "OnSaveInstanceState Called")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
 
-        Log.d("Fragment_A", "OnDestroyView Called")
+        Log.d("Fragment_B", "OnDestroyView Called")
     }
 
     override fun onDestroy() {
         super.onDestroy()
 
-        Log.d("Fragment_A", "OnDestroy Called")
+        Log.d("Fragment_B", "OnDestroy Called")
     }
 }

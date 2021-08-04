@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/fragmentA"
         android:name="com.getdefault.androidtasks.FragmentA"
-        android:label="FragmentA" />
+        android:label="FragmentA" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.getdefault.androidtasks.FragmentB"
+        android:label="FragmentB" />
 </navigation>
